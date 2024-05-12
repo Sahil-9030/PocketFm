@@ -30,7 +30,6 @@ const MediaPlayer = () => {
     pip: false,
   });
   const videoRef = useRef(null);
-  const [showLoading, setShowLoading] = useState(false);
   const [screenToggel, setScreenToggle] = useState(false);
   const [showControls, setShowControls] = useState(false);
 
@@ -138,12 +137,12 @@ const MediaPlayer = () => {
 
   const handleBufferStart = () => {
     setFileState((prevState) => ({ ...prevState, buffer: true }));
-    setShowLoading(true);
+   
   };
 
   const handleBufferEnd = () => {
     setFileState((prevState) => ({ ...prevState, buffer: false }));
-    setShowLoading(false);
+   
   };
 
   const toggleScreen = useCallback(() => {
